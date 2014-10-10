@@ -17,15 +17,16 @@ get '/' do
 end
 
 get '/users/new' do
+	@user = User.new
 	erb :sign_up
 end
 
 post '/users/new' do
-	user = User.new(:email => params[:email], 
+	@user = User.new(:email => params[:email], 
 									:name => params[:name],
 									:username => params[:username], 
 									:password => params[:password])
-	if user.save
+	if @user.save
 		redirect to ('/')
 	else
 		flash[:notice] = "Please complete all fields"
