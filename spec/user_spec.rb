@@ -12,4 +12,9 @@ describe User do
 		expect { User.create(:email => 'test@test.com', :name => 'test', :username => 'test', :password => '') }.to raise_error RuntimeError
 	end
 	
+	it "should not save a user if name is not supplied on sign up" do
+		User.create(:email => 'test@test.com', :username => 'test', :password => 'test')
+		expect(User.count).to be 0
+	end
+
 end
