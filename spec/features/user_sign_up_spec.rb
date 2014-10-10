@@ -20,8 +20,7 @@ feature "As a maker" do
 		expect(user.email).to eq("yvettecook@gmail.com")
 		expect(user.name).to eq("yvette")
 		expect(user.username).to eq("ynzc")
-		expect(user.password).to eq("test")
-	end 
+	end
 
 	#will pull out sign in process to seperate definition?
 end
