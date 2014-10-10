@@ -1,3 +1,5 @@
+<body>
+
 <form action="/users/new" method="POST">
 	Email: <input type="text" name="email">
 	Name: <input type="text" name="name">
@@ -5,3 +7,11 @@
 	Password: <input type="password" name="password">
 	<input type="submit" value="Sign Up">
 </form>
+
+<% if flash[:notice] %>
+	<div id="notice">
+		<%= flash[:notice] %>
+	</div>
+<% end %>
+
+</body>

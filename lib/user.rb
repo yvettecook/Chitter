@@ -13,7 +13,7 @@ class User
 	validates_presence_of :email, :name, :username, :password_digest
 
 	def password=(password)
-		raise "Password required" if password.length < 1
+		return "Password required" if password.length < 1
 		@password = password
 		self.password_digest = BCrypt::Password.create(password)
 	end 

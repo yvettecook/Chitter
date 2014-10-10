@@ -22,18 +22,16 @@ feature "As a maker" do
 		expect(user.username).to eq("ynzc")
 	end
 
-	# scenario "sign up form should require all fields filled out" do
-	# 	visit '/users/new'
-	# 	expect(User.count).to eq(0)
-	# 	fill_in 'email', with: "yvettecook@gmail.com"
-	# 	fill_in 'name', with: "yvette"
-	# 	fill_in 'username', with: "ynzc"
-	# 	click_button 'Sign Up'
-	# 	expect(current_path).to eq '/users/new'
-	# 	expect(page).to have_content("Please complete all fields")
-	# 	expect(User.count).to eq(0)
-	# end
+	scenario "sign up form should require all fields filled out" do
+		visit '/users/new'
+		expect(User.count).to eq(0)
+		fill_in 'email', with: "yvettecook@gmail.com"
+		fill_in 'name', with: "yvette"
+		fill_in 'username', with: "ynzc"
+		click_button 'Sign Up'
+		expect(current_path).to eq '/users/new'
+		expect(User.count).to eq(0)
+		expect(page).to have_content("Please complete all fields")
+	end
 
-
-	#will pull out sign in process to seperate definition?
 end

@@ -9,7 +9,8 @@ require './lib/user'
 DataMapper.finalize
 DataMapper.auto_upgrade!
 
-# use Rack::Flash
+enable :sessions
+use Rack::Flash
 
 get '/' do
 	erb :index
