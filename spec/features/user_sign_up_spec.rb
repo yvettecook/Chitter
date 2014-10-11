@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-feature "As a maker" do 
+feature "As a maker wanting to sign up" do 
 
 	scenario "on the homepage I will click sign up and be taken to a sign in page" do
 		visit '/'
@@ -21,7 +21,14 @@ feature "As a maker" do
 		sign_up("yvettecook@gmail.com", "yvette", "ynzc", "")
 		expect(current_path).to eq '/users/new'
 		expect(User.count).to eq 0
-		expect(page).to have_content "Please complete all fields"
+		expect(page).to have_content "Password digest must not be blank"
+	end
+
+	scenario "I should be notified if a username is already taken" do
+		sign_up("yvettecook@gmail.com", "yvette", "ynzc", "test")
+		sign_up("new@test.com", "yvette", "ynzc", "test")
+		expect(User.count).to eq 1
+		expect(page).to have_content "Username is already taken"
 	end
 
 
