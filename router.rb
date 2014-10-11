@@ -29,6 +29,13 @@ post '/sign_in' do
 	end
 end
 
+post '/sign_out' do
+	flash[:notice] = "Goodbye!"
+	session.clear
+	redirect to '/'
+	erb :index
+end
+
 get '/users/new' do
 	@user = User.new
 	erb :sign_up

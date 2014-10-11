@@ -7,8 +7,15 @@
 	<input type="submit" value="Sign In" name="Sign In">
 </form>
 
-
-
 <% if current_user %>
 	Welcome <%= current_user.name %>
+	<form action="/sign_out" method="post">
+		<input type="submit" value="Sign Out" name="Sign Out">
+	</form>
 <% end %>
+
+<% if flash[:notice] %>
+		<div id="notice">
+			<%= flash[:notice] %>
+		</div>
+	<% end %>
