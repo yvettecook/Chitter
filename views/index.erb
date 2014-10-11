@@ -15,7 +15,12 @@
 <% end %>
 
 <% if flash[:notice] %>
-		<div id="notice">
-			<%= flash[:notice] %>
-		</div>
-	<% end %>
+	<div id="notice">
+		<%= flash[:notice] %>
+	</div>
+<% end %>
+
+<form action="/new_peep" method="post">
+	<input type="text" name="content">
+	<input type="submit" value="Peep it!">
+</form>

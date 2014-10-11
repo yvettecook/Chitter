@@ -7,6 +7,7 @@ env = ENV["RACK_ENV"] || "development"
 DataMapper.setup(:default, "postgres://localhost/chitter_#{env}")
 require './lib/user'
 require './lib/helper'
+require './lib/peep'
 DataMapper.finalize
 DataMapper.auto_upgrade!
 
@@ -34,6 +35,11 @@ post '/sign_out' do
 	session.clear
 	redirect to '/'
 	erb :index
+end
+
+post '/new_peep' do
+	peep = Peep.create(:content => params[:content])
+	redirect '/'
 end
 
 get '/users/new' do
