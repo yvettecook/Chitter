@@ -31,6 +31,13 @@ feature "As a maker wanting to sign up" do
 		expect(page).to have_content "Username is already taken"
 	end
 
+	scenario "I should be notified if a email is already registered" do
+		sign_up("yvettecook@gmail.com", "yvette", "ynzc", "test")
+		sign_up("yvettecook@gmail.com", "yvette", "test", "test")
+		expect(User.count).to eq 1
+		expect(page).to have_content "Email is already taken"
+	end
+
 
 	def sign_up(email, name, username, password)
 		visit '/users/new'
