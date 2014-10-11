@@ -16,6 +16,7 @@ set :session_secret, 'secret'
 use Rack::Flash
 
 get '/' do
+	@peep = Peep.new
 	erb :index
 end
 
@@ -38,8 +39,13 @@ post '/sign_out' do
 end
 
 post '/new_peep' do
-	peep = Peep.create(:content => params[:content])
-	redirect '/'
+	@peep = Peep.new(:content => params[:content])
+	if @peep.save
+		redirect to '/'
+	else
+		flash.now[:errors] = @peep.errors.full_messages
+		erb :index
+	end
 end
 
 get '/users/new' do
