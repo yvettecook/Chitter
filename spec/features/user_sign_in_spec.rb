@@ -18,5 +18,12 @@ feature "As a registered user" do
 		click_button 'Sign In'
 		expect(page).to have_content 'Welcome Yvette'
 	end
-	
+
+	scenario "I should be prompted if I enter incorrect sign in details" do 
+		visit '/'
+		fill_in 'username', with: 'ynzc'
+		fill_in 'password', with: 'wrong'
+		click_button 'Sign In'
+		expect(page).to have_content 'Sorry, either your username or password is incorrect'
+	end
 end

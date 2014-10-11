@@ -24,6 +24,8 @@ post '/sign_in' do
 	if user
 		session[:user_id] = user.id
 		redirect to '/'
+	else
+		flash[:notice] = "Sorry, either your username or password is incorrect"
 	end
 end
 
