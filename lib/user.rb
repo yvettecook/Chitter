@@ -11,6 +11,7 @@ class User
 	property :password_digest,	Text
 
 	validates_presence_of :email, :name, :username, :password_digest
+	validates_uniqueness_of :email, :username
 
 	def password=(password)
 		return "Password required" if password.length < 1
