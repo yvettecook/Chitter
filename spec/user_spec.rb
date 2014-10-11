@@ -18,4 +18,24 @@ describe User do
 		expect(User.count).to be 0
 	end
 
+	it "should be able to autheticate users from username and password" do
+		user = User.create(:email => 'test@test.com', :name => 'test', :username => 'username', :password => 'test')
+		expect(User.authenticate('username','test')).not_to be(false)
+	end
+
+	it "should not autheticate users with incorrect password" do
+		user = User.create(:email => 'test@test.com', :name => 'test', :username => 'username', :password => 'test')
+		expect(User.authenticate('username','wrong')).to be(false)
+	end
+
+	it "should not autheticate users that are not registers" do
+		expect(User.authenticate('username','test')).to be(false)
+	end
+		
+
+	# it "email and username must be unique" do
+
+	# end
+
+
 end

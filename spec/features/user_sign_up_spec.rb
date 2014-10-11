@@ -9,29 +9,29 @@ feature "As a maker" do
 	end
 
 	scenario "on the sign in page I will enter my details, and a new user will be created" do
-		visit '/users/new'
-		fill_in 'email', with: "yvettecook@gmail.com"
-		fill_in 'name', with: "yvette"
-		fill_in 'username', with: "ynzc"
-		fill_in 'password', with: "test"
-		click_button 'Sign Up'
-		expect(User.count).to eq(1)
+		sign_up("yvettecook@gmail.com", "yvette", "ynzc", "test")
+		expect(User.count).to eq 1
 		user = User.first
-		expect(user.email).to eq("yvettecook@gmail.com")
-		expect(user.name).to eq("yvette")
-		expect(user.username).to eq("ynzc")
+		expect(user.email).to eq "yvettecook@gmail.com" 
+		expect(user.name).to eq "yvette" 
+		expect(user.username).to eq "ynzc"
 	end
 
 	scenario "sign up form should require all fields filled out" do
-		visit '/users/new'
-		expect(User.count).to eq(0)
-		fill_in 'email', with: "yvettecook@gmail.com"
-		fill_in 'name', with: "yvette"
-		fill_in 'username', with: "ynzc"
-		click_button 'Sign Up'
+		sign_up("yvettecook@gmail.com", "yvette", "ynzc", "")
 		expect(current_path).to eq '/users/new'
-		expect(User.count).to eq(0)
-		expect(page).to have_content("Please complete all fields")
+		expect(User.count).to eq 0
+		expect(page).to have_content "Please complete all fields"
+	end
+
+
+	def sign_up(email, name, username, password)
+		visit '/users/new'
+		fill_in 'email', with: email
+		fill_in 'name', with: name
+		fill_in 'username', with: username
+		fill_in 'password', with: password
+		click_button 'Sign Up'
 	end
 
 end

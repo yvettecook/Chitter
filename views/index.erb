@@ -1,1 +1,14 @@
 <a href="users/new">Sign Up</a>
+
+<form action='/sign_in' method="post">
+	Sign In<br>
+	Username<input type="text" name="username">
+	Password<input type="password" name="password">
+	<input type="submit" value="Sign In" name="Sign In">
+</form>
+
+
+
+<% if current_user %>
+	Welcome <%= current_user.name %>
+<% end %>
