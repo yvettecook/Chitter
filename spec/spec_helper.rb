@@ -1,9 +1,9 @@
 ENV["RACK_ENV"] = 'test'
 
 require 'capybara/rspec'
-require './router.rb'
+require './lib/router.rb'
 require 'database_cleaner'
-# require "rack/flash/test"
+
 
 Capybara.app = Sinatra::Application
 

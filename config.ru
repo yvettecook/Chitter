@@ -1,4 +1,4 @@
-require './router'
+require './lib/router'
 require 'rubygems'
 
 run Sinatra::Application

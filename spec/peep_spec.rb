@@ -1,5 +1,5 @@
-require 'peep'
-require 'user'
+require './lib/models/peep'
+require './lib/models/user'
 
 describe Peep do 
 
