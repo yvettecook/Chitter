@@ -1,0 +1,10 @@
+Latest Peeps
+<% Peep.each do |peep| %>
+ <ul id="peeps">
+ 	<li>
+ 		<span class="name"><%= peep.user.name %></span>
+ 		<span class="username">(<%= peep.user.username %>)</span>
+ 		<div class="content"><%= peep.content %></div>
+ 	</li>
+ </ul>
+<% end %>

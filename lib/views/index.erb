@@ -1,46 +1,8 @@
+<body>
+
 <a href="users/new">Sign Up</a>
 
-<form action='/sign_in' method="post">
-	Sign In<br>
-	Username<input type="text" name="username">
-	Password<input type="password" name="password">
-	<input type="submit" value="Sign In" name="Sign In">
-</form>
+<%= partial :sign_in %>
+<%= partial :peep_list %>
 
-<% if current_user %>
-	Welcome <%= current_user.name %>
-	<form action="/sign_out" method="post">
-		<input type="submit" value="Sign Out" name="Sign Out">
-	</form>
-
-	<form action="/new_peep" method="post">
-	<input type="text" name="content" value="<%= @peep.content %>">
-	<input type="submit" value="Peep it!">
-</form>
-
-<% end %>
-
-<% if flash[:notice] %>
-	<div id="notice">
-		<%= flash[:notice] %>
-	</div>
-<% end %>
-
-<% if flash[:errors] && !flash[:errors].empty? %>
-	<ul id="errors">
-		<% flash[:errors].each do |error| %>
-			<li><%= error %></li>
-		<% end %>
-	</ul>
-<% end %>
-
-Latest Peeps
-<% Peep.each do |peep| %>
- <ul id="peeps">
- 	<li>
- 		<span class="name"><%= peep.user.name %></span>
- 		<span class="username">(<%= peep.user.username %>)</span>
- 		<div class="content"><%= peep.content %></div>
- 	</li>
- </ul>
-<% end %>
+</body>

@@ -1,6 +1,8 @@
 require 'sinatra'
 require 'data_mapper'
 require 'rack-flash'
+require 'sinatra/partial'
+set :partial_template_engine, :erb
 
 require_relative 'models/user'
 require_relative 'models/peep'
