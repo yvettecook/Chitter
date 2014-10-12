@@ -39,7 +39,7 @@ post '/sign_out' do
 end
 
 post '/new_peep' do
-	@peep = Peep.new(:content => params[:content])
+	@peep = Peep.new(:user_id => session[:user_id],:content => params[:content])
 	if @peep.save
 		redirect to '/'
 	else

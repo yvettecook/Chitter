@@ -13,6 +13,8 @@ class User
 	validates_presence_of :email, :name, :username, :password_digest
 	validates_uniqueness_of :email, :username
 
+	has n, :peeps
+
 	def password=(password)
 		return "Password required" if password.length < 1
 		@password = password

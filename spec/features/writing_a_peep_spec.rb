@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-feature "From the homepage" do
+feature "From the homepage, wanting to share" do
 
 	before(:each) do
 		User.create(:email => 'test@test.com', :name => 'Yvette', :username => 'ynzc', :password => 'test')
@@ -22,14 +22,6 @@ feature "From the homepage" do
 		expect(Peep.count).to eq(0)
 		expect(page).to have_content 'Content must be at most 140 characters long'
 		expect(page).to have_selector("input[@value='this peep is far far far far far far far far far far far far far far far far far far far far far far far far far far far far far far far too long']")
-	end
-
-	scenario "any visitor should be able to see a list of peeps" do
-		visit '/'
-		test_peeps
-		expect(Peep.count).to eq(2)
-		expect(page).to have_content 'This is a test peep'
-		expect(page).to have_content 'This is a second test peep'
 	end
 
 	scenario "if a user isn't logged in, they cannot write a peep" do

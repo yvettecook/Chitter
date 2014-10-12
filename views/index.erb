@@ -34,11 +34,12 @@
 	</ul>
 <% end %>
 
-
-
 Latest Peeps
 <% Peep.each do |peep| %>
  <ul id="peeps">
- 	<li><%= peep.content %></li>
+ 	<li>
+ 		<div class="username">(<%= peep.user.username %>)</div>
+ 		<div class="content"><%= peep.content %></div>
+ 	</li>
  </ul>
 <% end %>

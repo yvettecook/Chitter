@@ -5,4 +5,6 @@ class Peep
 	property :id, 				Serial
 	property :content,		String, 	:length => 140 	
 
+	belongs_to :user
+	
 end
