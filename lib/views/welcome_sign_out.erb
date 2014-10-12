@@ -1,10 +1,13 @@
-<% if current_user %>
-	Welcome <%= current_user.name %>
+<div class = "welcome">
+	<p>Welcome <%= current_user.name %></p>
 	<form action="/sign_out" method="post">
 		<input type="submit" value="Sign Out" name="Sign Out">
 	</form>
-		<form action="/new_peep" method="post">
-			<input type="text" name="content" value="<%= @peep.content %>">
-			<input type="submit" value="Peep it!">
+</div>
+
+<div class = "write_peep">
+	<form action="/new_peep" method="post">
+		<input type="text" name="content" value="<%= @peep.content %>">
+		<input type="submit" value="Peep it!">
 	</form>
-<% end %>
+</div>

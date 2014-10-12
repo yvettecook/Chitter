@@ -1,0 +1,90 @@
+html, body { 
+	margin: 0px; 
+	padding: 0px; 
+	border: 0px; 
+}
+
+html {
+	border-top: 7px solid #505559;
+}
+
+.sign_up {
+	background-color: Black;
+	height: 30px;
+	width: 100%;
+	color: white;
+	font: bold 18px Helvetica, Sans-Serif;
+	letter-spacing: -1px;
+	text-align: right;
+}
+
+
+
+.sign_up link {
+
+}
+
+.image {
+	position: relative;
+}
+
+h2 {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	width: 20%;
+}
+
+h2 span {
+	color: white;
+	font: bold 40px/45px Helvetica, Sans-Serif;
+	letter-spacing: -1px;
+	background: rgba(0, 0, 0, 0.7);
+	padding: 10px;
+}
+
+h2 span.spacer {
+	padding:0 5px;
+}
+
+
+
+.sign_in {
+	background-color: rgb(80, 85, 89);
+	height: 30px;
+}
+
+.sign_in form {
+	padding-top: 5px;
+	color: white;
+	font: 12px Helvetica, Sans-Serif;
+	text-align: right;
+	padding-right: 10px;
+}
+
+.welcome { 
+	background-color: #F5F5F5;
+	height: 30px;
+}
+
+.welcome p {
+	padding-top: 5px;
+	color: rgb(80, 85, 89);
+	font: bold 12px Helvetica, Sans-Serif;
+	text-align: left;
+	padding-left: 10px;
+}
+
+.welcome form {
+	text-align: right;
+	padding-right: 10px;
+}
+
+
+
+	
+
+
+body {
+	background-color: #6495ed;
+}

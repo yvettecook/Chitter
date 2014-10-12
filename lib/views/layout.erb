@@ -1,14 +1,32 @@
 <html>
-	
+
+
 <head>
+	<link href="/css/style.css" type="text/css" rel="stylesheet" />
+
 	<title>Chitter</title>
-	<h1>Chitter</h1>
-	<h3>(definitely not Twitter)</h3>
+
+	<div class="sign_up">
+		<a href="users/new">Sign Up</a>
+	</div>
+
+	<div class="image">
+		<img src='/images/banner.png' alt="" width=100% />
+		<h2><span>Chitter</span><br /></h2>
+
+	</div>
+
+	
+	<% if !current_user %>
+		<%= partial :sign_in %>
+	<% else %>
+		<%= partial :welcome_sign_out %>
+	<% end %>
+
 </head>
 
 <body>
 
-	<%= partial :welcome_sign_out %>
 	<%= partial :errors %>
 	<%= partial :notice %>
 
