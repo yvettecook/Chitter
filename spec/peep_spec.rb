@@ -11,6 +11,6 @@ describe Peep do
 		peep = Peep.create(:user_id => 12, :content => 'This is a test peep')
 		expect(peep.user_id).to eq(12)
 	end
-	
+
 end
 

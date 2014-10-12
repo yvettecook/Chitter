@@ -28,6 +28,7 @@ post '/sign_in' do
 		redirect to '/'
 	else
 		flash[:notice] = "Sorry, either your username or password is incorrect"
+		redirect to '/'
 	end
 end
 

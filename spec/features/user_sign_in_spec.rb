@@ -19,6 +19,7 @@ feature "As a registered user" do
 	scenario "I should be prompted if I enter incorrect sign in details" do 
 		sign_in('ynzc', 'wrong')
 		expect(page).to have_content 'Sorry, either your username or password is incorrect'
+		expect(page).to have_content'Sign In'
 	end
 
 	scenario "once signed in, I should be able to sign out" do

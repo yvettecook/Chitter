@@ -17,7 +17,11 @@ feature "From the homepage as a visitor" do
 	scenario "peeps should have the username" do
 		expect(page).to have_content '(ynzc) This is a test peep'
 		expect(page).to have_content '(ynzc) This is a second test peep'
+	end
 
+	scenario "peeps should have the name of the user" do
+		expect(page).to have_content 'Yvette (ynzc) This is a test peep'
+		expect(page).to have_content 'Yvette (ynzc) This is a second test peep'
 	end
 
 	def sign_in(username, password)
