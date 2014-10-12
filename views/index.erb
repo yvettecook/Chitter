@@ -12,6 +12,12 @@
 	<form action="/sign_out" method="post">
 		<input type="submit" value="Sign Out" name="Sign Out">
 	</form>
+
+	<form action="/new_peep" method="post">
+	<input type="text" name="content" value="<%= @peep.content %>">
+	<input type="submit" value="Peep it!">
+</form>
+
 <% end %>
 
 <% if flash[:notice] %>
@@ -28,7 +34,11 @@
 	</ul>
 <% end %>
 
-<form action="/new_peep" method="post">
-	<input type="text" name="content" value="<%= @peep.content %>">
-	<input type="submit" value="Peep it!">
-</form>
+
+
+Latest Peeps
+<% Peep.each do |peep| %>
+ <ul id="peeps">
+ 	<li><%= peep.content %></li>
+ </ul>
+<% end %>
