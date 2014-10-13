@@ -2,6 +2,7 @@
 
 ###Features:
 - [ ]	Password reset process by sending token to user email address
+- [x] Correct loss of peep issue (rake auto_migrate?)
 
 ###Deployment:
 - [ ] Create a staging app for Heroku
