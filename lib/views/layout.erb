@@ -1,14 +1,22 @@
 <html>
 	
 <head>
+<link href="/css/style.css" type="text/css" rel="stylesheet" width=100% />
 	<title>Chitter</title>
-	<h1>Chitter</h1>
-	<h3>(definitely not Twitter)</h3>
+
+	<section class="image">
+		<img src='/images/banner.png' alt="" width=100%/>
+		<h1><span>Chitter</span></h1>
+	</section>
 </head>
 
 <body>
 
+<section class="signing">
 	<%= partial :welcome_sign_out %>
+</section>
+	
+
 	<%= partial :errors %>
 	<%= partial :notice %>
 
