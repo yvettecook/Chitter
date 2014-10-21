@@ -5,6 +5,7 @@
 	</form>
 		<form action="/new_peep" method="post">
 			<input type="text" name="content" value="<%= @peep.content %>">
+			<input type="hidden" name="user_id" value="<%= session[:user_id] %>">
 			<input type="submit" value="Peep it!">
 	</form>
 <% end %>

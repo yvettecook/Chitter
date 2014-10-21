@@ -27,18 +27,18 @@ describe User do
 
 	end
 
-	context "validating uniqueness" do
+	context "it should validating uniqueness of" do
 
 		before(:each) do
 		User.create(:email => 'test@test.com', :name => 'test', :username => 'username', :password => 'test')
 		end
 
-		it "it should validate that email supplied is unique" do
+		it "email" do
 			user = User.new(:email => 'test@test.com', :name => 'test', :username => 'username', :password => 'test')
 			expect(user).not_to be_valid
 		end
 
-		it "it should validate that username supplied is unique" do
+		it "username" do
 			user = User.new(:email => 'new@test.com', :name => 'new', :username => 'username', :password => 'test')
 			expect(user).not_to be_valid
 		end
@@ -51,7 +51,6 @@ describe User do
 			user = double :user, password_digest: ''
 			allow(BCrypt::Password).to receive(:new).and_return('test')
 			allow(User).to receive(:first).and_return(user)
-
 			expect(User.authenticate('username','test')).to equal user
 		end
 
