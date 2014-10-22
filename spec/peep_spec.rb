@@ -17,7 +17,5 @@ describe Peep do
 		expect(peep.user_id).to eq(12)
 	end
 
-#Is this test touching the database or not?
-
 end
 

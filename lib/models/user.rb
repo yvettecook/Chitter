@@ -33,5 +33,4 @@ class User
 	def self.register_with(params)
 		User.create(params)
 	end
-	
 end
