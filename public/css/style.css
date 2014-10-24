@@ -1,8 +1,13 @@
 html, body { 
-	margin-left: 5px; 
+	margin-left: 0px; 
 	padding: 0px; 
 	border: 0px; 
 	margin-top: 0px;
 
 }
 
+body {
+	background-image: url("/images/chitterheader.png");
+	background-repeat: repeat-x;
+	background-color: #C0DEED;
+}
