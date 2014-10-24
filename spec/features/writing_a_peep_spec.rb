@@ -30,9 +30,12 @@ feature "From the homepage, wanting to share" do
 	end
 
 	def sign_in(username, password)
-		fill_in 'username', with: username
-		fill_in 'password', with: password
-		click_button 'Sign In'
+		visit '/'
+		within('.sign_in') do
+			fill_in 'username', with: username
+			fill_in 'password', with: password
+			click_button 'Sign In'
+		end
 	end
 
 	def test_peeps
