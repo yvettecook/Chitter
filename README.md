@@ -1,5 +1,5 @@
-##Chitter (definitely not Twitter)
-###Makers Academy Week 4 Challenge
+## Chitter (definitely not Twitter)
+### Makers Academy Week 4 Challenge
 
 A lightweight (i.e. basic) Twitter clone that will allow users to post messages to a public stream.
 
@@ -16,3 +16,17 @@ Outline:
 * Peeps show the name of the maker and their user handle
 * You don't have to be logged in to see the peeps
 * You can only send a peep if you are logged in
+
+### Phase 2: Week 6 Frontman 
+
+One of the biggest complaints from users (i.e. me) about the phase 1 deployment was that the front end doesn't *feel right*. So the priorities for the weekend is:
+
+- [ ] Skin the application (mainly css and html), recreating Twitter's somewhat prettier interface
+- [ ] Make the whole front end work with Javascript and HandlebarsJS
+- [ ] Ensure that we only serve one html from the server that will imitate the application
+
+It would also be kind of cool for people to be able to steal all my peeps to embed in their own website. So I will also:
+
+- [ ] Create a JSON API on the server and make the front end talk to that api
+
+

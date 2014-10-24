@@ -1,4 +1,30 @@
 ##To Do
+
+### Recreating Twitter UI
+
+- Header
+	- 
+- Logo
+- Colour palette
+- Two columns 
+	1. Smaller, left hand with user details. 
+		- Name
+		- Username 
+		- User photo (placeholder image for now)
+		- Compose new tweet button
+	2. Larger, right hand with tweet stream
+		- Tweets seperated by line
+		- Each tweet:
+			- Name (strong), username (light), Timestamp
+			- Content
+			
+
+
+
+
+
+
+--------------
  
 ### Features:
 - [ ]	Password reset process by sending token to user email address

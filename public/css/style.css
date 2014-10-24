@@ -6,23 +6,3 @@ html, body {
 
 }
 
-.image {
-	position: relative;
-	width: 100%;
-}
-
-h1 {
-	position: absolute;
-	top: 25%;
-	text-align: center;
-	color: black;
-	font: bold 36px/45px Helvetica, Sans-Serif; 
-	background: rgb(0, 0, 0);
-	background: rgba(255,255,255, 0.5);
-	padding: 15px;
-	width: 100%;
-}
-
-.signing {
-	width: 100%;
-}
