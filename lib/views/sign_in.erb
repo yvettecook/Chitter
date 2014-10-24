@@ -1,8 +1,8 @@
-<form class='sign_in' action='/sign_in' method="post">
+<form class='sign_in' action='/sign_in' method="post" >
 	<% if current_user == nil %>
-		Sign In<br>
-		Username<input type="text" name="username">
-		Password<input type="password" name="password">
+		Sign In |   
+		Username  <input type="text" name="username">
+		Password  <input type="password" name="password">
 		<input type="submit" value="Sign In" name="Sign In">
 	<% end %>
 </form>
