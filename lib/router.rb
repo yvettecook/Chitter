@@ -17,4 +17,3 @@ use Rack::Flash
 require_relative 'controllers/sign_in_and_out_controller'
 require_relative 'controllers/new_peep_controller'
 require_relative 'controllers/homepage_controller'
-require_relative 'controllers/users_controller'
