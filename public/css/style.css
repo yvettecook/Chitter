@@ -3,7 +3,22 @@ html, body {
 	padding: 0px; 
 	border: 0px; 
 	margin-top: 0px;
+	margin-right: 0px; 
+}
 
+.top_nav_bar {
+	background-color: White;
+	height: 3em;
+	border-bottom-color: #78A3B8;
+	border-bottom-width: 2px;
+	border-bottom-style: Solid;
+	margin-bottom: 1em;
+}
+
+.top_nav_bar #logo {
+	height: 55%;
+	margin-left: 5%;
+	margin-top: 0.65em;
 }
 
 body {
@@ -11,3 +26,35 @@ body {
 	background-repeat: repeat-x;
 	background-color: #C0DEED;
 }
+
+.peep_list {
+	background-color: White;
+	float: right;
+	width: 50%;
+	margin-right: 5%;
+	padding: 1%;
+}
+
+.sign_in {
+	background-color: White;
+	float: right;
+	width: 40%;
+	margin-left: 5%;
+}
+
+.sign_up {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: White;
+}
+
+.user_info {
+	width: 30%;
+	background-color: White;
+	margin-left: 5%;
+	float: left;
+	padding: 1%;
+
+}
+

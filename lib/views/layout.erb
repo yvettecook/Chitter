@@ -1,37 +1,44 @@
 <html>
 	
-<head>
+	<head>
 
-<link href="/css/style.css" type="text/css" rel="stylesheet" width=100% />
+		<link href="/css/style.css" type="text/css" rel="stylesheet" width=100% />
 
-	<title>Chitter</title>
+		<title>Chitter</title>
+		<link rel="shortcut icon" href="/images/logo.ico" >
+
+	</head>
+
+	<body>
+
+		<section class="top_nav_bar">
+			<img id='logo' src='/images/logo.jpeg' >
+			<section class="sign_in">
+				<%= partial :errors %>
+				<%= partial :notice %>
+				<%= partial :sign_in %>
+			</section>
+
+		</section>
+
+		<section class="user_info">
+			<%= partial :welcome_sign_out %>
+		</section>
+
+		<section class="sign_up">
+			<%= partial :sign_up %>
+		</section>
+		
+		<section class="peep_list">
+			<%= partial :peep_list %>
+		</section>
 
 
-</head>
-
-<body>
-
-	<section class="top_nav_bar">
-		<img id='logo' src='/images/logo.jpeg' height=5%>
-
-	</section>
-
-<section class="welcome">
-	<%= partial :welcome_sign_out %>
-</section>
-	
-
-	<%= partial :errors %>
-	<%= partial :notice %>
-	<%= partial :sign_up %>
-	<%= partial :sign_in %>
-	<%= partial :peep_list %>
-
-</body>
 
 
-<footer>
-Made by @ynzc, student @makers_academy
-</footer>
+	<script type='text/javascript' src='/javascript/jquery.js'></script>
+	<script type='text/javascript' src='/javascript/handlebars.js'></script>
+
+	</body>
 
 </html>
