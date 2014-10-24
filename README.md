@@ -3,6 +3,8 @@
 
 A lightweight (i.e. basic) Twitter clone that will allow users to post messages to a public stream.
 
+Find it at: [serene-sea-5950.herokuapp.com/](http://serene-sea-5950.herokuapp.com/)
+
 Features:
 * Users can sign up to the service
 * Users can log in
