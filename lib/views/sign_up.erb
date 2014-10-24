@@ -1,11 +1,10 @@
-<body>
+<% if current_user == nil %>
+	<form class='sign_up' action="/" method="POST">
+		Email: <input type="text" name="email" value="<%= @user.email %>">
+		Name: <input type="text" name="name" value="<%= @user.name %>">
+		Username: <input type="text" name="username" value="<%= @user.username %>">
+		Password: <input type="password" name="password">
+		<input type="submit" value="Sign Up">
+	</form>
+<% end %>
 
-<form action="/users/new" method="POST">
-	Email: <input type="text" name="email" value="<%= @user.email %>">
-	Name: <input type="text" name="name" value="<%= @user.name %>">
-	Username: <input type="text" name="username" value="<%= @user.username %>">
-	Password: <input type="password" name="password">
-	<input type="submit" value="Sign Up">
-</form>
-
-</body>

@@ -1,5 +1,5 @@
 post '/new_peep' do
-	@peep = Peep.new(:user_id => session[:user_id],:content => params[:content])
+	@peep = Peep.peep_with(params.merge({user: current_user}))
 	if @peep.save
 		redirect to '/'
 	else
