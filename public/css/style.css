@@ -33,6 +33,9 @@ body {
 	width: 50%;
 	margin-right: 5%;
 	padding: 0.5%;
+	border: 2px solid;
+	border-color: #E1E8ED;
+  border-radius: 5px;
 }
 
 .sign_in {
@@ -48,6 +51,10 @@ body {
 	margin-left: 5%;
 	float: left;
 	padding: 1%;
+	height: 25%;
+	border: 2px solid;
+	border-color: #E1E8ED;
+  border-radius: 5px;
 }
 
 .user_info {
@@ -56,5 +63,9 @@ body {
 	margin-left: 5%;
 	float: left;
 	padding: 1%;
+	height: 30%;
+	border: 2px solid;
+	border-color: #E1E8ED;
+  border-radius: 5px;
 }
 
