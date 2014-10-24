@@ -6,6 +6,7 @@ html, body {
 	margin-right: 0px; 
 }
 
+
 .top_nav_bar {
 	background-color: White;
 	height: 3em;
@@ -25,17 +26,7 @@ body {
 	background-image: url("/images/chitterheader.png");
 	background-repeat: repeat-x;
 	background-color: #C0DEED;
-}
-
-.peep_list {
-	background-color: White;
-	float: right;
-	width: 50%;
-	margin-right: 5%;
-	padding: 0.5%;
-	border: 2px solid;
-	border-color: #E1E8ED;
-  border-radius: 5px;
+	font-family: 'Helvetica Neue';
 }
 
 .sign_in {
@@ -45,26 +36,43 @@ body {
 	margin-top: 0.5em;
 }
 
-.sign_up {
-	width: 30%;
+.peep_list {
 	background-color: White;
-	margin-left: 5%;
+	float: right;
+	width: 49%;
+	margin-right: 12%;
+	padding: 0.5%;
+	border: 1px solid;
+	border-color: #E1E8ED;
+  border-radius: 5px;
+}
+
+.peep_list h3 {
+	font-size: 22pt;
+	font-weight: 300;
+	color: #6F757F;
+}
+
+.sign_up {
+	width: 23%;
+	background-color: White;
+	margin-left: 12%;
 	float: left;
-	padding: 1%;
-	height: 25%;
-	border: 2px solid;
+	padding-left: 1%;
+	height: 14em;
+	border: 1px solid;
 	border-color: #E1E8ED;
   border-radius: 5px;
 }
 
 .user_info {
-	width: 30%;
+	width: 23%;
 	background-color: White;
-	margin-left: 5%;
+	margin-left: 12%;
 	float: left;
-	padding: 1%;
-	height: 30%;
-	border: 2px solid;
+	padding-left: 1%;
+	height: 14em;
+	border: 1px solid;
 	border-color: #E1E8ED;
   border-radius: 5px;
 }
