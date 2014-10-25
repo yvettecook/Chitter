@@ -49,17 +49,7 @@ body {
   border-radius: 5px;
 }
 
-.user_info {
-	width: 23%;
-	background-color: White;
-	margin-left: 12%;
-	float: left;
-	padding-left: 1%;
-	height: 14em;
-	border: 1px solid;
-	border-color: #E1E8ED;
-  border-radius: 5px;
-}
+
 
 .peep_list {
 	background-color: White;
@@ -75,9 +65,10 @@ body {
 
 
 .peep_list h3 {
-	font-size: 22pt;
+	font-size: 21pt;
 	font-weight: 300;
 	color: #6F757F;
+	margin: 0.3em;
 }
 
 .peep {
@@ -93,11 +84,19 @@ body {
 	color: #292f33;
 	font-size: 12pt;
 	display: inline;
+	line-height: 1em;
 }
+
+.peep h2 {
+	color: #8899a6;
+	font-size: 11pt;
+	font-weight: 200;
+}
+
 
 .peep #content {
 	color: #292f33;
-	font-size: 12pt;
+	font-size: 11pt;
 	display: inline;
 }
 
@@ -109,5 +108,31 @@ body {
 	margin-right: 1em;
 }
 
+.user_info {
+	width: 23%;
+	background-color: White;
+	margin-left: 12%;
+	float: left;
+	padding: 0;
+	height: 14em;
+	border: 1px solid;
+	border-color: #E1E8ED;
+  border-radius: 5px;
+}
+
+.user_info #banner_image {
+	width: 100%;
+	border-radius: 5px;
+
+}
+
+.user_info #profile  {
+	height: 48px;
+	border-radius: 5px;
+	display: inline;
+	float: left;
+	margin-right: 1em;
+	position: relative;
+}
 
 

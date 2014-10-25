@@ -1,13 +1,21 @@
 <% if current_user %>
 	<section class="user_info">
+		<section class="banner">
+			<img id='banner_image' src='/images/relax.png'>
+		</section>
+		<section class="profile-pic">
+			<img id="profile" src="/images/ycprofile.jpeg">
+		</section>
 		Welcome <%= current_user.name %>
 		<form action="/sign_out" method="post">
 			<input type="submit" value="Sign Out" name="Sign Out">
-		</form>
-			<form action="/new_peep" method="post">
-				<input type="text" name="content" value="<%= @peep.content %>">
-				<input type="submit" value="Peep it!">
-		</form>
+		<section class="peep">
+			</form>
+				<form action="/new_peep" method="post">
+					<input type="text" name="content" value="<%= @peep.content %>">
+					<input type="submit" value="Peep it!">
+			</form>
+		</section>
 	</section>
 
 <% else %>
