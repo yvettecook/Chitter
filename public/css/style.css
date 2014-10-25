@@ -36,22 +36,6 @@ body {
 	margin-top: 0.5em;
 }
 
-.peep_list {
-	background-color: White;
-	float: right;
-	width: 49%;
-	margin-right: 12%;
-	padding: 0.5%;
-	border: 1px solid;
-	border-color: #E1E8ED;
-  border-radius: 5px;
-}
-
-.peep_list h3 {
-	font-size: 22pt;
-	font-weight: 300;
-	color: #6F757F;
-}
 
 .sign_up {
 	width: 23%;
@@ -76,4 +60,54 @@ body {
 	border-color: #E1E8ED;
   border-radius: 5px;
 }
+
+.peep_list {
+	background-color: White;
+	float: right;
+	width: 49%;
+	margin-right: 12%;
+	padding: 0%;
+	border: 1px solid;
+	border-color: #E1E8ED;
+  border-radius: 5px;
+  margin-bottom: 2%;
+}
+
+
+.peep_list h3 {
+	font-size: 22pt;
+	font-weight: 300;
+	color: #6F757F;
+}
+
+.peep {
+	border-top: 1px solid;
+	border-color: #E1E8ED;
+	margin-left: 0px;
+	padding: 0.75em;
+	min-height: 3em;
+}
+
+.peep h1, h2 {
+	font-weight: bold;
+	color: #292f33;
+	font-size: 12pt;
+	display: inline;
+}
+
+.peep #content {
+	color: #292f33;
+	font-size: 12pt;
+	display: inline;
+}
+
+.peep #profile {
+	height: 48px;
+	border-radius: 5px;
+	display: inline;
+	float: left;
+	margin-right: 1em;
+}
+
+
 

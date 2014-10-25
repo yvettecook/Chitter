@@ -1,8 +1,9 @@
 <h3>Peeps</h3>
 <% Peep.each do |peep| %>
 <!-- <template id='peeps'> -->
- <article>
+ <article class='peep'>
  	<header>
+ 		<img id='profile' src='/images/ycprofile.jpeg'>
  		<h1><%= peep.user.name %></h1>
  		<h2>@<%= peep.user.username %></h2>
  	</header>
