@@ -135,4 +135,10 @@ body {
 	position: relative;
 }
 
+.user_info .peep {
+	height: 30px;
+	background-color: #E5F2F7;
+	float: bottom;
+}
+
 
