@@ -2,41 +2,19 @@
 
 ### Recreating Twitter UI
 
-- Header
-	- 
-- Logo
-- Colour palette
-- Two columns 
-	1. Smaller, left hand with user details. 
-		- Name
-		- Username 
-		- User photo (placeholder image for now)
-		- Compose new tweet button
-	2. Larger, right hand with tweet stream
-		- Tweets seperated by line
-		- Each tweet:
-			- Name (strong), username (light), Timestamp
-			- Content
-			
+- [ ] User info box
+- [ ] Sign up box
+- [ ] Sign in header format
+- [ ] Timestamp on peeps
+- [ ] Individual user profile pictures
 
-
-
-
-
-
---------------
- 
 ### Features:
 - [ ]	Password reset process by sending token to user email address
 - [x] Correct loss of peep issue (rake auto_migrate?)
 
 ### Deployment:
+- [ ] Upload updated version (26/10) to Heroku
 - [ ] Create a staging app for Heroku
-
-### Appearance:
-- [ ] Sort out CSS (generally!)
-	- [ ] Peep list
-	- [ ] Sign In button
 
 ### Learning:
 - [ ] Understand process of creating and manageing databases with PostGreSQL and Heroku

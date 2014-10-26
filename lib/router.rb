@@ -14,7 +14,7 @@ require './lib/helpers/datamapper_setup'
 enable :sessions
 set :session_secret, 'secret'
 use Rack::Flash
-
+set :public_folder, File.dirname(__FILE__) + "./public"
 require_relative 'controllers/sign_in_and_out_controller'
 require_relative 'controllers/new_peep_controller'
 require_relative 'controllers/homepage_controller'
