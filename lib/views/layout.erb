@@ -27,16 +27,15 @@
 
 			<%= partial :welcome_sign_out %>
 
-		<section class="peep_section">
+		<section class="peep_list">
 			<h3>Peeps</h3>
-				<a href='#' id='get_me_peeps'>fetch ma peeps</a>
 				<section id='peep_list'>
 					<template id='peepTemplate'>
 					 <article class='peep'>
 					 	<header>
 					 		<img id='profile' src='/images/ycprofile.jpeg'>
-					 		<h1>{{peep.user.name}}</h1>
-					 		<h2>@{{peep.user.username}}</h2>
+					 		<h1>{{user.name}}</h1>
+					 		<h2>@{{user.username}}</h2>
 					 	</header>
 					 		<p id="content">{{content}}</p>
 					 </article>
@@ -50,12 +49,12 @@
 
 		<script type='text/javascript'>
 
-			$('#get_me_peeps').on('click', function () {
+			$(document).ready(function () {
 				console.log('hello');
 				var source = $('#peepTemplate').html();
 				var template = Handlebars.compile(source);
 		 		$.ajax({
-					url: '/peeps',
+					url: 'api/peeps',
 					method: 'GET'
 				}).done(function (data) { 
 					data.forEach(function (d) {

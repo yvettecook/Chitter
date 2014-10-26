@@ -15,8 +15,12 @@ post '/' do
 	end
 end
 
-get '/peeps' do
+get '/api/peeps' do
 	content_type :json
 	@peeps = Peep.all
-	@peeps.to_json
+	@peep_feed = @peeps.to_json(
+		:relationships => { 
+			:user => {:exclude => [:password_digest, :email]} 
+		} 
+	)
 end
