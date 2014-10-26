@@ -59,7 +59,7 @@
 					method: 'GET'
 				}).done(function (data) { 
 					data.forEach(function (d) {
-		 				$('#peep_list').append("<p>" + d.content + "</p>");
+		 				$('#peep_list').append(template(d));
 					});
 				});
 			});
