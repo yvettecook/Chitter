@@ -2,6 +2,7 @@ require 'sinatra'
 require 'data_mapper'
 require 'rack-flash'
 require 'sinatra/partial'
+require 'json'
 set :partial_template_engine, :erb
 
 require_relative 'models/user'

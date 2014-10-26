@@ -27,18 +27,44 @@
 
 			<%= partial :welcome_sign_out %>
 
-		<section class="peep_list">
-			<%= partial :peep_list %>
+		<section class="peep_section">
+			<h3>Peeps</h3>
+				<a href='#' id='get_me_peeps'>fetch ma peeps</a>
+				<section id='peep_list'>
+					<template id='peepTemplate'>
+					 <article class='peep'>
+					 	<header>
+					 		<img id='profile' src='/images/ycprofile.jpeg'>
+					 		<h1>{{peep.user.name}}</h1>
+					 		<h2>@{{peep.user.username}}</h2>
+					 	</header>
+					 		<p id="content">{{content}}</p>
+					 </article>
+					</template>
+				</section>
 		</section>
 
 
-	<script type='text/javascript' src='/javascript/jquery.js'></script>
-	<script type='text/javascript' src='/javascript/handlebars.js'></script>
+<script type='text/javascript' src='/javascript/jquery.js'></script>
+<script type='text/javascript' src='/javascript/handlebars.js'></script>
 
-	<script type='text/javascipt'>
-		
+		<script type='text/javascript'>
 
-	</script>
+			$('#get_me_peeps').on('click', function () {
+				console.log('hello');
+				var source = $('#peepTemplate').html();
+				var template = Handlebars.compile(source);
+		 		$.ajax({
+					url: '/peeps',
+					method: 'GET'
+				}).done(function (data) { 
+					data.forEach(function (d) {
+		 				$('#peep_list').append("<p>" + d.content + "</p>");
+					});
+				});
+			});
+
+		</script>
 
 	</body>
 

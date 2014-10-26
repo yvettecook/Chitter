@@ -14,3 +14,9 @@ post '/' do
 		redirect to '/'
 	end
 end
+
+get '/peeps' do
+	content_type :json
+	@peeps = Peep.all
+	@peeps.to_json
+end

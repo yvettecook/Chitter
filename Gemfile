@@ -9,6 +9,7 @@ gem 'bcrypt'
 gem 'rack-flash3'
 gem 'sinatra-partial'
 gem 'pg'
+gem 'json'
 
 
 group :development, :test do
