@@ -1,15 +1,19 @@
 ##To Do
 
+### Tests
+
+- Ensure all tests pass
+
 ### Recreating Twitter UI
 
-- [ ] User info box
+- [x] User info box
 - [ ] Sign up box
 - [ ] Sign in header format
 - [ ] Timestamp on peeps
 - [ ] Individual user profile pictures
 
 ### Features:
-- [ ]	Password reset process by sending token to user email address
+- [ ] Password reset process by sending token to user email address
 - [x] Correct loss of peep issue (rake auto_migrate?)
 
 ### Deployment:
