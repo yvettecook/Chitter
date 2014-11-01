@@ -28,13 +28,6 @@ feature "As a registered user" do
 		expect(page).not_to have_content 'Welcome Yvette'
 	end
 
-	def sign_in(username, password)
-		visit '/'
-		within('#sign_in') do
-			fill_in 'username', with: username
-			fill_in 'password', with: password
-			click_button 'Sign In'
-		end
-	end
+
 
 end

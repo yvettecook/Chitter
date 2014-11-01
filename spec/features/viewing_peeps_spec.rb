@@ -1,13 +1,46 @@
-require 'spec_helper'
+ENV["RACK_ENV"] = 'test'
+
+require 'capybara/rspec'
+require 'capybara-webkit'
+require './lib/router.rb'
+require 'database_cleaner'
+Capybara.javascript_driver = :webkit
+
+RSpec.configure do |config|
+
+  config.expect_with :rspec do |expectations|
+    expectations.include_chain_clauses_in_custom_matcher_descriptions = true
+
+  config.before(:suite) do
+    DatabaseCleaner.strategy = :transaction
+    DatabaseCleaner.clean_with(:truncation)
+
+  end
+
+  config.before(:each) do
+    DatabaseCleaner.start
+  end
+
+  config.after(:each) do
+    DatabaseCleaner.clean 
+  end
+
+end
+
+  config.mock_with :rspec do |mocks|
+    mocks.verify_partial_doubles = true
+  end
+
+end
 
 feature "From the homepage as a visitor" do
 
 	before(:each) do
-		User.create(:email => 'test@test.com', :name => 'Yvette', :username => 'ynzc', :password => 'test')
-		test_peeps
+		Peep.create(:id => 12, :content => 'This is a test peep', :user_id => 1)
+		Peep.create(:id => 13, :content => 'This is a second test peep', :user_id => 1)
 	end
 
-	scenario "any visitor should be able to see a list of peeps" do
+	xscenario "any visitor should be able to see a list of peeps", :js => true do
 		visit '/'
 		expect(Peep.count).to eq(2)
 		expect(page).to have_content 'This is a test peep'
@@ -24,25 +57,6 @@ feature "From the homepage as a visitor" do
 		expect(page).to have_content 'Yvette @ynzc This is a second test peep'
 	end
 
-	def sign_in(username, password)
-		visit '/'
-		within('#sign_in') do
-			fill_in 'username', with: username
-			fill_in 'password', with: password
-			click_button 'Sign In'
-		end
-	end
-
-
-	def test_peeps
-		visit '/'
-		sign_in('ynzc', 'test')
-		fill_in 'content', with: 'This is a test peep'
-		click_button 'Peep it!'
-		fill_in 'content', with: 'This is a second test peep'
-		click_button 'Peep it!'
-		click_button 'Sign Out'
-	end
 
 end
 

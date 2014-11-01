@@ -17,6 +17,7 @@ group :development, :test do
 	gem 'cucumber'
 	gem 'cucumber-sinatra'
 	gem 'capybara'
+	gem "capybara-webkit"
 	gem 'rspec'
 	gem 'shotgun'
 	gem 'database_cleaner'

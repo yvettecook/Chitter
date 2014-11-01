@@ -38,13 +38,6 @@ feature "From the homepage, wanting to share" do
 		end
 	end
 
-	def test_peeps
-		sign_in('ynzc', 'test')
-		fill_in 'content', with: 'This is a test peep'
-		click_button 'Peep it!'
-		fill_in 'content', with: 'This is a second test peep'
-		click_button 'Peep it!'
-		click_button 'Sign Out'
-	end
+
 
 end
