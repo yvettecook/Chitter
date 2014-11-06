@@ -5,6 +5,8 @@ A lightweight (i.e. basic) Twitter clone that will allow users to post messages 
 
 Find it at: [serene-sea-5950.herokuapp.com/](http://serene-sea-5950.herokuapp.com/)
 
+![screenshot](/public/images/screenshot.png?raw=true)
+
 Features:
 * Users can sign up to the service
 * Users can log in
@@ -31,5 +33,3 @@ It would also be kind of cool for people to be able to steal all my peeps to emb
 
 - [x] Create a JSON API on the server and make the front end talk to that api
 
-
-Testing github push
