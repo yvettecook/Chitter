@@ -22,7 +22,7 @@ RSpec.configure do |config|
   end
 
   config.after(:each) do
-    DatabaseCleaner.clean 
+    DatabaseCleaner.clean
   end
 
 end
@@ -59,12 +59,3 @@ feature "From the homepage as a visitor" do
 
 
 end
-
-	# Trying to find a better way to test peeps
-	# scenario "2 // peeps should have the name of the user and their username" do
-	# 	peeps = page.all("ul.peeps li div.content")
-	# 	expect(peeps[0]).to have_content 'This is a test peep'
-	# 	expect(peeps[0]).to have_content 'ynzc'
-	# 	expect(peeps[1]).to have_content 'This is a second test peep'
-	# 	expect(peeps[1]).to have_content 'ynzc'
-	# end
