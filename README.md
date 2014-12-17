@@ -67,6 +67,13 @@ Testing:
 * Shotgun
 
 
+### Installation
+------------------
+
+```` $ bundle install````
+
+
+
 ### To Do
 ------------------
 
