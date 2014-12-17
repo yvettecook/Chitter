@@ -1,7 +1,6 @@
 require './lib/models/peep'
 require './lib/models/user'
 
-
 env = ENV["RACK_ENV"] || "development"
 
 case env
@@ -14,4 +13,4 @@ end
 
 DataMapper.setup(:default, db_path)
 DataMapper.finalize
-# DataMapper.auto_upgrade!
+DataMapper.auto_upgrade!
